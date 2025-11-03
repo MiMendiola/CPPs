@@ -14,7 +14,7 @@ class Weapon {
         
         std::string getType();
         
-        void        setType(const char *type);
+        void        setType(std::string type);
 
     private:
         std::string	_type;

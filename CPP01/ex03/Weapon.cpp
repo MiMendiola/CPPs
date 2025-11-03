@@ -20,10 +20,7 @@ std::string     Weapon::getType()
     return this->_type;
 }
 
-void            Weapon::setType(const char *type)
+void            Weapon::setType(std::string type)
 {
-    if (type)
-        this->_type = type;
-    else
-        this->_type.clear();
+    this->_type = type;
 }

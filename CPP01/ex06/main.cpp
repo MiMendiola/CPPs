@@ -1,13 +1,5 @@
 #include "Harl.hpp"
 
-std::string	stringToUpper(std::string string)
-{
-	for (size_t i = 0; i < string.length(); i++) {
-        string[i] = std::toupper(string[i]);
-    }
-    return string;
-}
-
 int main(int ac, char *av[])
 {
     if (ac < 2)
@@ -23,7 +15,7 @@ int main(int ac, char *av[])
 
     Harl harl;
 
-    harl.complain(stringToUpper(av[1]));
+    harl.complain(av[1]);
 
     return 0;
 }

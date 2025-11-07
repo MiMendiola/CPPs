@@ -17,6 +17,7 @@ Cat &Cat::operator=(const Cat &Cat)
 {
     if (this != &Cat) {
         this->type = Cat.type;
+        *this->brain = *(Cat.brain);
     }
     std::cout << BLUE << "Cat Copy Assignment Constructor Called!" << RESET << std::endl;
 
@@ -26,6 +27,7 @@ Cat &Cat::operator=(const Cat &Cat)
 Cat::~Cat()
 {
     std::cout << BLUE << "Cat Destructor Called!" << RESET << std::endl;
+    delete brain;
 }
 
 void    Cat::makeSound() const

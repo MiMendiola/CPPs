@@ -17,6 +17,7 @@ Dog &Dog::operator=(const Dog &Dog)
 {
     if (this != &Dog) {
         this->type = Dog.type;
+        *this->brain = *(Dog.brain);
     }
     std::cout << BLUE << "Dog Copy Assignment Constructor Called!" << RESET << std::endl;
 
@@ -26,6 +27,7 @@ Dog &Dog::operator=(const Dog &Dog)
 Dog::~Dog()
 {
     std::cout << BLUE << "Dog Destructor Called!" << RESET << std::endl;
+    delete brain;
 }
 
 void    Dog::makeSound() const
